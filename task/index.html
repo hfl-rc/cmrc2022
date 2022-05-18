@@ -189,7 +189,10 @@
 <nav class="toc">
     <header><h4 class="nav__title"><i class="fa fa-gears"></i> </h4></header>
 <ul class="toc__menu" id="markdown-toc">
-  <li><a href="#任务内容" id="markdown-toc-任务内容">任务内容</a></li>
+  <li><a href="#任务内容" id="markdown-toc-任务内容">任务内容</a>    <ul>
+      <li><a href="#数据获取和使用要求" id="markdown-toc-数据获取和使用要求">数据获取和使用要求</a></li>
+    </ul>
+  </li>
   <li><a href="#评测数据" id="markdown-toc-评测数据">评测数据</a></li>
   <li><a href="#数据格式" id="markdown-toc-数据格式">数据格式</a>    <ul>
       <li><a href="#json举例抽取式" id="markdown-toc-json举例抽取式">JSON举例（抽取式）</a></li>
@@ -214,7 +217,7 @@
 
 <p>本次评测的难点在于，<strong>组委会并不提供带标注的训练集合</strong>。因此选手需要设计无监督或弱监督的机器阅读理解系统来完成答案和佐证依据的抽取。</p>
 
-<h4 id="数据获取和使用要求">数据获取和使用要求：</h4>
+<h3 id="数据获取和使用要求">数据获取和使用要求</h3>
 
 <ul>
   <li><strong>可以</strong>使用以下数据进行训练：
@@ -308,21 +311,69 @@
 
 <h3 id="json举例抽取式">JSON举例（抽取式）</h3>
 
-<p>| JSON字段   | 介绍                                          |
-| :——— | :——————————————– |
-| version    | 数据集版本             |
-| data | 实际数据部分                                |
-| title    | 标题            |
-| paragraphs    | 该标题下若干个篇章 |
-| id    | 篇章ID |
-| context | 篇章文本内容 |
-| qas | 问题、答案、证据 | 
-| question | 问题文本 |
-| id | 问题id |
-| answers | 参考答案 |
-| text | 答案文本 |
-| answer_start | 答案开始位置（仅供参考） |
-| evidences | 参考证据 |</p>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">JSON字段</th>
+      <th style="text-align: left">介绍</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">version</td>
+      <td style="text-align: left">数据集版本</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">data</td>
+      <td style="text-align: left">实际数据部分</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">title</td>
+      <td style="text-align: left">标题</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">paragraphs</td>
+      <td style="text-align: left">该标题下若干个篇章</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">id</td>
+      <td style="text-align: left">篇章ID</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">context</td>
+      <td style="text-align: left">篇章文本内容</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">qas</td>
+      <td style="text-align: left">问题、答案、证据</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">question</td>
+      <td style="text-align: left">问题文本</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">id</td>
+      <td style="text-align: left">问题id</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">answers</td>
+      <td style="text-align: left">参考答案</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">text</td>
+      <td style="text-align: left">答案文本</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">answer_start</td>
+      <td style="text-align: left">答案开始位置（仅供参考）</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">evidences</td>
+      <td style="text-align: left">参考证据</td>
+    </tr>
+  </tbody>
+</table>
+
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
   "version": "expmrc-cmrc2018-dev",
   "data": [
@@ -480,7 +531,7 @@
 
 <h2 id="基线系统">基线系统</h2>
 
-<p>基线系统：<a href="https://github.com/ymcui/expmrc">GitHub</a></p>
+<p>选手可通过GitHub获取基线系统代码：<a href="https://github.com/ymcui/expmrc/tree/main/baseline">GitHub地址</a></p>
 
 
         
