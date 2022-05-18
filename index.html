@@ -142,7 +142,10 @@
           <li class="masthead__menu-item masthead__menu-item--lg"><a href="https://hfl-rc.github.io/cmrc2022/">CMRC 2022</a></li>
           
             
-            <li class="masthead__menu-item"><a href="https://hfl-rc.github.io/cmrc2022/committee">委员会</a></li>
+            <li class="masthead__menu-item"><a href="https://hfl-rc.github.io/cmrc2022/task">任务介绍</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://hfl-rc.github.io/cmrc2022/committee">评测委员会</a></li>
           
             
             <li class="masthead__menu-item"><a href="http://cips-cl.org/static/CCL2022/index.html">CCL 2022</a></li>
@@ -215,113 +218,47 @@
 
 <p>从2017年开始，全国计算语言学学术会议（CCL）计划举办评测活动。作为全国计算语言学学术会议（CCL）的系列评测，今年将继续举办<strong>第五届“讯飞杯”中文机器阅读理解评测 (The 5th Evaluation Workshop on Chinese Machine Reading Comprehension, CMRC 2022)</strong>，并将于2022年10月与<strong><a href="http://cips-cl.org/static/CCL2022/index.html">第二十一届全国计算语言学学术会议</a></strong>（CCL 2022）共同召开。</p>
 
-<p>本届中文机器阅读理解评测由<strong><a href="http://www.cips-cl.org">中国中文信息学会计算语言学专业委员会（CIPS-CL）</a></strong>主办，<strong><a href="http://hfl-rc.github.io">哈工大讯飞联合实验室（HFL）</a></strong>承办，<strong><a href="http://www.iflytek.com">科大讯飞股份有限公司</a></strong>冠名赞助，旨在进一步促进中文机器阅读理解研究及发展并且为相关领域学者提供一个良好的沟通平台。在此，CMRC 2022评测委员会诚邀各界人士参加本次评测活动！</p>
-
-<h2 id="评测简介">评测简介</h2>
-
-<h3 id="任务内容">任务内容</h3>
 <p>第五届“讯飞杯”中文机器阅读理解（CMRC 2022）的任务是可解释性阅读理解。给定一个篇章以及和篇章相关的问题，参赛队伍需要设计一个可以同时抽取答案和佐证依据的机器阅读理解系统。根据阅读理解类型分为以下两个赛道：</p>
 
 <ul>
-  <li>抽取型阅读理解赛道：答案和佐证依据均是篇章中的某个连续片段</li>
-  <li>选择型阅读理解赛道：答案是从若干个候选选项中选出，佐证依据是篇章中的某个连续片段</li>
+  <li><strong>抽取型阅读理解赛道</strong>：答案和佐证依据均是篇章中的某个连续片段</li>
+  <li><strong>选择型阅读理解赛道</strong>：答案是从若干个候选选项中选出，佐证依据是篇章中的某个连续片段</li>
 </ul>
 
-<p>本次评测的难点在于，组委会并不提供带标注的训练集合。因此选手需要设计无监督或弱监督的机器阅读理解系统来完成答案和佐证依据的抽取。</p>
+<p>本次评测的难点在于，<strong>组委会并不提供带标注的训练集合</strong>。因此选手需要设计无监督或弱监督的机器阅读理解系统来完成答案和佐证依据的抽取。关于详细的任务设置请查看：<a href="./task">任务介绍</a></p>
 
-<p>训练数据获取要求：</p>
-
-<ul>
-  <li>可以使用：任何公开数据中的训练集，例如CMRC 2018、DRCD、C3等；也可以对公开数据进行自动化的处理，例如使用启发式规则抽取佐证证据以构建伪训练数据。</li>
-  <li>不可使用：任何未公开的数据（例如私自标注的数据）；本届评测提供的开发集，即ExpMRC开发集。</li>
-</ul>
-
-<p>后续比赛报名和详细流程发布请关注评测官方网站：http://cmrc2022.hfl-rc.com</p>
-
-<h3 id="评测数据">评测数据</h3>
-<p>本次评测使用的数据是可解释性阅读理解数据集ExpMRC (Cui et al., 2022)的中文子集，即CMRC 2018和C3子集，相关统计信息如下所示。目前只开放开发集的下载，供参赛者调试系统。测试集是隐藏的，不对外开放，仅在决赛阶段使用。</p>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left"> </th>
-      <th style="text-align: center">抽取型（CMRC 2018）</th>
-      <th style="text-align: center"> </th>
-      <th style="text-align: center">选择型（C3）</th>
-      <th style="text-align: center"> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left"> </td>
-      <td style="text-align: center">开发集</td>
-      <td style="text-align: center">测试集</td>
-      <td style="text-align: center">开发集</td>
-      <td style="text-align: center">测试集</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">答案类型</td>
-      <td style="text-align: center">篇章片段</td>
-      <td style="text-align: center">篇章片段</td>
-      <td style="text-align: center">选择题</td>
-      <td style="text-align: center">选择题</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">领域</td>
-      <td style="text-align: center">维基百科</td>
-      <td style="text-align: center">维基百科</td>
-      <td style="text-align: center">考试</td>
-      <td style="text-align: center">考试</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">篇章数</td>
-      <td style="text-align: center">369</td>
-      <td style="text-align: center">399</td>
-      <td style="text-align: center">273</td>
-      <td style="text-align: center">244</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">问题数</td>
-      <td style="text-align: center">515</td>
-      <td style="text-align: center">500</td>
-      <td style="text-align: center">505</td>
-      <td style="text-align: center">500</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">最大参考答案数量</td>
-      <td style="text-align: center">3</td>
-      <td style="text-align: center">3</td>
-      <td style="text-align: center">1</td>
-      <td style="text-align: center">1</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">最大参考证据数量</td>
-      <td style="text-align: center">2</td>
-      <td style="text-align: center">2</td>
-      <td style="text-align: center">4</td>
-      <td style="text-align: center">4</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>数据和基线系统获取地址：https://github.com/ymcui/expmrc</p>
-
-<h3 id="评价标准">评价标准</h3>
-<p>提供三种评价方法，分别对答案、证据以及两者综合进行评价。F1指标用来计算正确答案（证据）和预测答案（证据）之间的重叠程度。最终排名将通过“综合F1”指标降序排列得出。具体请参考官方给出的评测脚本：https://github.com/ymcui/expmrc/blob/main/eval_expmrc.py</p>
-
-<ul>
-  <li>
-    <p>抽取型阅读理解赛道：答案F1、证据F1、综合F1</p>
-  </li>
-  <li>
-    <p>选择型阅读理解赛道：答案准确率、证据F1、综合F1</p>
-  </li>
-</ul>
-
-<p>其中综合F1是答案精度和证据精度的综合考量：  F1(综合) = F1(答案) × F1(证据)</p>
+<p>本届中文机器阅读理解评测由<strong><a href="http://www.cips-cl.org">中国中文信息学会计算语言学专业委员会（CIPS-CL）</a></strong>主办，<strong><a href="http://hfl-rc.github.io">哈工大讯飞联合实验室（HFL）</a></strong>承办，<strong><a href="http://www.iflytek.com">科大讯飞股份有限公司</a></strong>冠名赞助，旨在进一步促进中文机器阅读理解研究及发展并且为相关领域学者提供一个良好的沟通平台。在此，CMRC 2022评测委员会诚邀各界人士参加本次评测活动！</p>
 
 <h2 id="奖项设置">奖项设置</h2>
-<p>待公布</p>
+<p>本届评测分别为两个赛道（抽取式阅读理解和选择型阅读理解）颁奖。各赛道分别颁发：</p>
+
+<table style="width: 40%">
+	<tbody>
+		<tr style="background-color: #F0F0F0">
+			<td style="width: 20%;" align="center"><b>奖项</b></td>
+			<td style="width: 20%;" align="center"><b>数量</b></td>
+			<td style="width: 60%;" align="center"><b>奖励</b></td>
+		</tr>
+		<tr>
+			<td style="width: 20%;" align="center"><img src="./images/gold.png" alt="gold" /> <b>冠军</b></td>
+			<td style="width: 20%;" align="center"><b>一名</b></td>
+			<td style="width: 60%;" align="center"><b> 奖金 + 荣誉证书</b></td>
+		</tr>
+		<tr>
+			<td style="width: 20%;" align="center"><img src="./images/silver.png" alt="silver" /> <b>亚军</b></td>
+			<td style="width: 20%;" align="center"><b>一名</b></td>
+			<td style="width: 60%;" align="center"><b>奖金 + 荣誉证书</b></td>
+		</tr>
+		<tr>
+			<td style="width: 20%;" align="center"><img src="./images/bronze.png" alt="bronze" /> <b>季军</b></td>
+			<td style="width: 20%;" align="center"><b>一名</b></td>
+			<td style="width: 60%;" align="center"><b>奖金 + 荣誉证书</b></td>
+		</tr>     
+	</tbody>
+</table>
+
+<p>由<strong>中国中文信息学会计算语言学专委会（CIPS-CL）</strong>为获奖队伍颁发荣誉证书。<br />
+由<strong>科大讯飞股份有限公司</strong>和为获奖队伍提供奖金。更多细节将在评测官网发布。</p>
 
 <h2 id="重要时间">重要时间</h2>
 
@@ -369,10 +306,9 @@
 <p>各阶段说明：</p>
 
 <ol>
-  <li>报名方式：届时将通过评测官方网站发布报名方式。</li>
-  <li>资格赛阶段：参赛队伍将通过官方平台自助提交开发集结果，取前10名进入到资格审查环节。</li>
-  <li>资格审查阶段：入围队伍需要提交代码至Codalab worksheet以完成资格审查，不符合参赛规则的队伍将失去决赛资格。</li>
-  <li>决赛阶段：资格审查通过的队伍将提交两组系统，由组委会给出测试集结果，取两组系统测试集“综合F1”指标高的结果作为该队伍的最终评测结果，参与最终的排名。</li>
+  <li><strong>资格赛阶段</strong>：参赛队伍将通过官方平台自助提交开发集结果，取前10名进入到资格审查环节。</li>
+  <li><strong>资格审查阶段</strong>：入围队伍需要提交代码至Codalab worksheet以完成资格审查（后续公布详细流程），同时需要提供训练数据来源的详细说明，不符合参赛规则的队伍将失去决赛资格。</li>
+  <li><strong>决赛阶段</strong>：资格审查通过的队伍将提交两组系统，由组委会给出测试集结果，取两组系统测试集“综合F1”指标高的结果作为该队伍的最终评测结果，参与最终的排名。</li>
 </ol>
 
 <p>注：所有截止时间点为<a href="https://time.is/UTC+8">北京时间（UTC+8）23:59</a>。<br /></p>
