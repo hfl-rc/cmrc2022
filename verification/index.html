@@ -306,7 +306,7 @@
 <p>zip文件应按以下规范进行整理：</p>
 <ol>
   <li>必须包含运行程序必要的源代码和模型文件。</li>
-  <li>程序主入口为run.sh文件，运行格式为<code class="highlighter-rouge">run.sh input_file output_file</code>，其中<code class="highlighter-rouge">input_file</code>为数据集JSON文件、<code class="highlighter-rouge">output_file</code>为模型输出文件JSON文件。如程序包含多个步骤，请放在<code class="highlighter-rouge">run.sh</code>内处理。</li>
+  <li>程序主入口为单个shell脚本，即<code class="highlighter-rouge">run.cmrc.sh</code>（抽取型）或<code class="highlighter-rouge">run.c3.sh</code>（选择型）。运行格式为<code class="highlighter-rouge">run.sh input_file output_file</code>，其中<code class="highlighter-rouge">input_file</code>为数据集JSON文件、<code class="highlighter-rouge">output_file</code>为模型输出文件JSON文件。如程序包含多个步骤，请放在<code class="highlighter-rouge">run.sh</code>内处理。</li>
   <li>系统描述文档，简要填写系统的主要情况，包括训练数据来源和大小、程序运行环境说明（包括依赖的库及其版本）等。描述文档请使用模板填写：<a href="../res/cmrc2022_system_template.docx">模板下载地址</a></li>
   <li>系统描述文档和zip压缩包请分别命名为<code class="highlighter-rouge">cmrc2022_system_NAME</code>（.docx/.zip），其中<code class="highlighter-rouge">NAME</code>为codalab账号名。</li>
   <li>准备好上述压缩包后，请<strong>队伍联络人</strong>使用<strong>注册邮箱</strong>将zip压缩包发至组委会邮箱<code class="highlighter-rouge">cmrc2022@126.com</code>。推荐使用百度网盘或阿里网盘等，请勿使用小众且限速的网盘。
