@@ -284,9 +284,9 @@
 <ol>
   <li>开发集与测试集结果是否存在较大差异。</li>
   <li>源代码和模型能否准确地复现资格赛提交结果。</li>
-  <li>训练数据是否符合大赛要求。</li>
+  <li>训练数据是否符合大赛要求。<strong>再次强调：不能将开发集放入训练集进行训练。</strong> 见：<a href="https://hfl-rc.com/cmrc2022/task/#数据获取和使用要求">数据要求</a></li>
   <li>队伍是否存在违反比赛规则的行为（例如注册多个账号等）。</li>
-  <li>源程序压缩包应小于10G限制。</li>
+  <li>源程序zip压缩包应小于10G限制。</li>
 </ol>
 
 <h2 id="重要时间">重要时间</h2>
@@ -295,7 +295,9 @@
 
 <p>资格审查结果通知时间：2022年8月15日</p>
 
-<p><em>注：资格审查结果仅公布是否通过，即是否进入最终决赛，不会告知测试集结果。</em></p>
+<p>注：
+1、资格审查结果仅公布是否通过，即是否进入最终决赛，不会告知测试集结果。
+2、超时未提交则视为放弃比赛。</p>
 
 <h2 id="提交流程">提交流程</h2>
 
@@ -304,14 +306,20 @@
 <p>zip文件应按以下规范进行整理：</p>
 <ol>
   <li>必须包含运行程序必要的源代码和模型文件。</li>
-  <li>程序主入口为run.sh文件，运行格式为<code class="highlighter-rouge">run.sh input_file output_file</code>，其中<code class="highlighter-rouge">input_file</code>为数据集文件、<code class="highlighter-rouge">output_file</code>为模型输出文件。</li>
-  <li>系统描述文档，简要填写系统的主要情况，包括训练数据来源和大小、程序运行环境说明（包括依赖的库及其版本）等。描述文档请用模板填写：<a href="../res/cmrc2022_system_template.docx">模板下载地址</a></li>
+  <li>程序主入口为run.sh文件，运行格式为<code class="highlighter-rouge">run.sh input_file output_file</code>，其中<code class="highlighter-rouge">input_file</code>为数据集JSON文件、<code class="highlighter-rouge">output_file</code>为模型输出文件JSON文件。如程序包含多个步骤，请放在<code class="highlighter-rouge">run.sh</code>内处理。</li>
+  <li>系统描述文档，简要填写系统的主要情况，包括训练数据来源和大小、程序运行环境说明（包括依赖的库及其版本）等。描述文档请使用模板填写：<a href="../res/cmrc2022_system_template.docx">模板下载地址</a></li>
   <li>系统描述文档和zip压缩包请分别命名为<code class="highlighter-rouge">cmrc2022_system_NAME</code>（.docx/.zip），其中<code class="highlighter-rouge">NAME</code>为codalab账号名。</li>
+  <li>准备好上述压缩包后，请<strong>队伍联络人</strong>使用<strong>注册邮箱</strong>将zip压缩包发至组委会邮箱<code class="highlighter-rouge">cmrc2022@126.com</code>。推荐使用百度网盘或阿里网盘等，请勿使用小众且限速的网盘。
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>邮件主题：CMRC2022资格审查代码提交（codalab名：）
+邮件内容：（自拟）
+（附源程序zip压缩包）
+</code></pre></div>    </div>
+  </li>
 </ol>
 
 <p>注意：</p>
 <ol>
-  <li>提交之前请务必线下测试好再发送。</li>
+  <li>由于有一周的时间准备代码，提交之前请务必线下测试好再发送。</li>
   <li>因参赛队伍自身问题导致程序无法运行等情况，其后果由参赛队伍自行承担。</li>
   <li>参赛队伍应预留一定时间，提早提交代码（而不是在最后一刻提交），以免程序出现bug导致拖慢进度，甚至失去决赛资格。</li>
   <li>请勿尝试访问开发集或测试集的标签（label），此部分已做相应处理。</li>
